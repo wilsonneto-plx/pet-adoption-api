@@ -1,0 +1,1 @@
+ALTER TABLE adocoes ADD COLUMN data_solicitacao DATETIME;
