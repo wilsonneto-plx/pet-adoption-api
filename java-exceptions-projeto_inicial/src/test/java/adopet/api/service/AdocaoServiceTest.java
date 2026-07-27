@@ -8,7 +8,7 @@ import adopet.api.model.*;
 import adopet.api.repository.AdocaoRepository;
 import adopet.api.repository.PetRepository;
 import adopet.api.repository.TutorRepository;
-import adopet.api.validacoes.ValidacaoSolicitacaoAdocao;
+import adopet.api.validation.ValidacaoSolicitacaoAdocao;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

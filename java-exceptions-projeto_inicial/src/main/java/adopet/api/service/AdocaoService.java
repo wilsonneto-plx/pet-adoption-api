@@ -9,7 +9,7 @@ import adopet.api.model.Tutor;
 import adopet.api.repository.AdocaoRepository;
 import adopet.api.repository.PetRepository;
 import adopet.api.repository.TutorRepository;
-import adopet.api.validacoes.ValidacaoSolicitacaoAdocao;
+import adopet.api.validation.ValidacaoSolicitacaoAdocao;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

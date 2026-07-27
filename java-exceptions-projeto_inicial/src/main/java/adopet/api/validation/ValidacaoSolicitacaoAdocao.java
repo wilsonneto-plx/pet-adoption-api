@@ -1,4 +1,4 @@
-package adopet.api.validacoes;
+package adopet.api.validation;
 
 import adopet.api.dto.AdocaoRequestDTO;
 
