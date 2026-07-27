@@ -132,11 +132,11 @@ Os testes automatizados estão organizados separadamente em:
 
 📦 src/test/java/adopet.api
 │
-├── 📂 service
-│   └── Testes das regras de negócio utilizando JUnit 5 e Mockito
+├── 📂 controller
+│   └── Testes dos endpoints REST utilizando MockMvc
 │
-└── 📂 controller
-    └── Testes dos endpoints REST utilizando MockMvc
+└── 📂 service
+    └── Testes das regras de negócio utilizando JUnit 5 e Mockito
 ```
 ---
 
