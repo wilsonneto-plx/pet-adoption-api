@@ -206,18 +206,10 @@ $env:DB_HOST="localhost:3306"; $env:DB_NAME="adopet_db"; $env:DB_USER="seu_usuar
 
 ## 📷 Documentação da API
 
-A documentação dos endpoints foi criada utilizando **Swagger/OpenAPI**.
+A API conta com documentação interativa gerada com Swagger/OpenAPI, permitindo explorar todos os endpoints, modelos de dados e operações disponíveis.
 
 <p align="center">
   <img src="docs/swagger-overview.png" width="900">
-</p>
-
-## 📷 Exemplo de endpoint
-
-Exemplo da documentação de um endpoint da API utilizando Swagger/OpenAPI.
-
-<p align="center">
-  <img src="docs/swagger-pet-endpoint.png" width="900">
 </p>
 
 ---
