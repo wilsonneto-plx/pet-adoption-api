@@ -92,9 +92,11 @@ A aplicação está estruturada nos seguintes pacotes:
 📦 src/main/java/adopet.api
 │
 ├── 📂 config
-│   └── Configurações da documentação Swagger/OpenAPI
+│   └── Configurações da documentação Swagger/OpenAPI e configurações gerais
 │
 ├── 📂 controller
+│   ├── 📂 doc
+│   │   └── Interfaces de documentação do Swagger/OpenAPI (padrão Interface-Driven)
 │   └── Responsável pelos endpoints REST e gerenciamento das requisições HTTP
 │
 ├── 📂 dto
