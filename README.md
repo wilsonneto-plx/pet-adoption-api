@@ -13,6 +13,7 @@ Sistema de gerenciamento de adoção de pets desenvolvido como uma **API REST** 
   <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
   <img src="https://img.shields.io/badge/JUnit_5-25A162?style=for-the-badge&logo=junit5&logoColor=white" />
   <img src="https://img.shields.io/badge/Mockito-78A641?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" />
 </p>
 
 </div>
@@ -21,45 +22,35 @@ Sistema de gerenciamento de adoção de pets desenvolvido como uma **API REST** 
 
 <table>
 <tr>
-
 <td width="180" align="center">
-
 <img src="https://github.com/wilsonneto-plx.png" width="150" alt="Wilson de Andrade Veloso Neto">
-
 </td>
-
 <td>
 
 ## 👨‍💻 Desenvolvedor Backend Java
 
 **Wilson de Andrade Veloso Neto**
 
-🎓 Bacharelando em Ciência da Computação — UESPI
-
-📚 Aprimorando conhecimentos em Java, Spring Boot e Backend pela Alura
-
-☕ Java | Spring Boot | APIs REST | JUnit 5 | Mockito | MySQL
+🎓 Bacharelando em Ciência da Computação — UESPI  
+📚 Aprimorando conhecimentos em Java, Spring Boot e Backend pela Alura  
+☕ Java | Spring Boot | APIs REST | JUnit 5 | Mockito | MySQL  
 
 <p>
-
 <a href="https://github.com/wilsonneto-plx">
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
 </a>
-
 <a href="https://www.linkedin.com/in/wilson-neto-5b1207398/">
 <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
 </a>
-
 </p>
 
 </td>
-
 </tr>
 </table>
 
 ---
 
-# 📖 Sobre
+## 📖 Sobre
 
 A **Pet Adoption API** é uma API REST desenvolvida para gerenciar o processo de adoção de pets.
 
@@ -69,29 +60,29 @@ O projeto foi desenvolvido seguindo boas práticas de desenvolvimento com o ecos
 
 ---
 
-# ✨ Funcionalidades
+## ✨ Funcionalidades
 
-- 🐶 Cadastro, listagem, atualização e remoção de Pets
-- 👤 Cadastro, listagem, atualização e remoção de Tutores
-- 🏠 Cadastro e gerenciamento de Adoções
-- ✅ Aprovação de adoções
-- ❌ Reprovação de adoções
+- 🐶 Cadastro, listagem, atualização e remoção de Pets.
+- 👤 Cadastro, listagem, atualização e remoção de Tutores.
+- 🏠 Cadastro e gerenciamento de Adoções.
+- ✅ Aprovação de adoções.
+- ❌ Reprovação de adoções.
 
-### Características técnicas
+### Características Técnicas
 
-* ⚙️ API REST seguindo boas práticas
-* 🏗️ Arquitetura em camadas
-* 🗄️ Persistência de dados com Spring Data JPA
-* 🐬 Banco de dados MySQL
-* 📦 DTOs para comunicação entre camadas
-* ✔️ Validação de dados com Bean Validation
-* 🛡️ Tratamento global de exceções
-* 🧪 Testes unitários com JUnit 5 e Mockito
-* 🌐 Testes de Controller utilizando MockMvc
+* ⚙️ API REST seguindo boas práticas.
+* 🏗️ Arquitetura em camadas.
+* 🗄️ Persistência de dados com Spring Data JPA.
+* 🐬 Banco de dados MySQL.
+* 📦 DTOs para comunicação entre camadas.
+* ✔️ Validação de dados com Bean Validation.
+* 🛡️ Tratamento global de exceções.
+* 🧪 Testes unitários com JUnit 5 e Mockito.
+* 🌐 Testes de Controller utilizando MockMvc.
 
 ---
 
-# 🏗️ Arquitetura do projeto
+## 🏗️ Arquitetura do Projeto
 
 O projeto foi desenvolvido seguindo uma **arquitetura em camadas**, buscando uma melhor organização das responsabilidades, separação das regras de negócio e facilidade de manutenção.
 
@@ -100,7 +91,12 @@ A aplicação está estruturada nos seguintes pacotes:
 ```text
 📦 src/main/java/adopet.api
 │
+├── 📂 config
+│   └── Configurações da documentação Swagger/OpenAPI e configurações gerais
+│
 ├── 📂 controller
+│   ├── 📂 doc
+│   │   └── Interfaces de documentação do Swagger/OpenAPI (padrão Interface-Driven)
 │   └── Responsável pelos endpoints REST e gerenciamento das requisições HTTP
 │
 ├── 📂 dto
@@ -118,11 +114,8 @@ A aplicação está estruturada nos seguintes pacotes:
 ├── 📂 service
 │   └── Contém as regras de negócio e lógica da aplicação
 │
-├── 📂 validation
-│   └── Regras de validação dos dados recebidos pela API
-│
-└── 📂 config
-    └── Configurações da documentação Swagger/OpenAPI
+└── 📂 validation
+    └── Regras de validação dos dados recebidos pela API
 
 ```
 
@@ -204,13 +197,13 @@ $env:DB_HOST="localhost:3306"; $env:DB_NAME="adopet_db"; $env:DB_USER="seu_usuar
 ```
 ---
 
-## 📷 Documentação da API
+## 📄 Documentação da API (Swagger)
 
-A API conta com documentação interativa gerada com Swagger/OpenAPI, permitindo explorar todos os endpoints, modelos de dados e operações disponíveis.
+O projeto conta com a documentação automatizada e interativa fornecida pelo **Swagger UI**. 
 
-<p align="center">
-  <img src="docs/swagger-overview.png" width="900">
-</p>
+Após iniciar a aplicação, você pode visualizar todos os endpoints, os schemas de requisição/resposta (DTOs) e testar a API diretamente pelo navegador acessando:
+
+🔗 **[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)**
 
 ---
 
