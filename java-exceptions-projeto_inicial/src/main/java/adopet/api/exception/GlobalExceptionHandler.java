@@ -1,6 +1,7 @@
 package adopet.api.exception;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -64,6 +65,19 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.badRequest().body(listaDeErrosFormatados);
 
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ResponseError> tratarErroDeIntegridadeDoBanco(DataIntegrityViolationException ex) {
+
+        ResponseError response = new ResponseError(
+                "Não é possível excluir: o registro possui histórico ou " +
+                        "dependências no sistema (ex: adoções vinculadas)",
+                HttpStatus.BAD_REQUEST,
+                LocalDateTime.now()
+        );
+
+        return ResponseEntity.badRequest().body(response);
     }
 
     private record DadosErroValidacao(String campo, String mensagem) {
