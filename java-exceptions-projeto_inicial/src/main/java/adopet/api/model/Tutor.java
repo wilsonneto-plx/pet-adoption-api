@@ -1,6 +1,6 @@
 package adopet.api.model;
 
-import adopet.api.dto.TutorAtualizaoDTO;
+import adopet.api.dto.TutorAtualizacaoDTO;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -38,7 +38,7 @@ public class Tutor {
         this.telefone = telefone;
     }
 
-    public void atualizarDados(TutorAtualizaoDTO dados) {
+    public void atualizarDados(TutorAtualizacaoDTO dados) {
         if (dados.nome() != null){
             this.nome = dados.nome();
         }

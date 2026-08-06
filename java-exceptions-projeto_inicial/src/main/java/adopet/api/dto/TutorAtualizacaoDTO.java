@@ -3,7 +3,7 @@ package adopet.api.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;
 
-public record TutorAtualizaoDTO(
+public record TutorAtualizacaoDTO(
         String nome,
 
         @Email

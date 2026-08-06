@@ -12,8 +12,7 @@ public record PetAtualizacaoDTO(
         TipoPorte porte,
 
         @PositiveOrZero(message = "Se informada, a idade não pode ser negativa.")
-        Integer idade,
+        Integer idade
 
-        String imagem
 ) {
 }

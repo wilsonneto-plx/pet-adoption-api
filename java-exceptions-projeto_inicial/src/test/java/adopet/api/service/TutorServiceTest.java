@@ -1,7 +1,7 @@
 package adopet.api.service;
 
 
-import adopet.api.dto.TutorAtualizaoDTO;
+import adopet.api.dto.TutorAtualizacaoDTO;
 import adopet.api.dto.TutorRequestDTO;
 import adopet.api.dto.TutorResponseDTO;
 import adopet.api.exception.AdocaoException;
@@ -94,7 +94,7 @@ public class TutorServiceTest {
 
         Tutor tutor = criarTutorPadrao();
         Long idValido = 1L;
-        TutorAtualizaoDTO dto = mock(TutorAtualizaoDTO.class);
+        TutorAtualizacaoDTO dto = mock(TutorAtualizacaoDTO.class);
 
         given(dto.nome()).willReturn("Wilson Neto");
         given(dto.email()).willReturn("wilsonneto10@gmail.com");
@@ -116,7 +116,7 @@ public class TutorServiceTest {
     void deveLancarExcecaoAoAtualizarTutorInexistente() {
 
         Long idInvalido = 99L;
-        TutorAtualizaoDTO dto = mock(TutorAtualizaoDTO.class);
+        TutorAtualizacaoDTO dto = mock(TutorAtualizacaoDTO.class);
 
         given(repository.findById(idInvalido)).willReturn(Optional.empty());
 

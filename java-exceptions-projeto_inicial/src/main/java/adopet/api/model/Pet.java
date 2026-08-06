@@ -3,7 +3,6 @@ package adopet.api.model;
 
 import adopet.api.dto.PetAtualizacaoDTO;
 import jakarta.persistence.*;;
-import jakarta.validation.constraints.NotBlank;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -68,8 +67,6 @@ public class Pet {
         if (dados.nome() != null) {this.nome = dados.nome();}
         if (dados.idade() != null) {this.idade = dados.idade();}
         if (dados.porte() != null) {this.porte = dados.porte();}
-        if (dados.imagem() != null) {this.imagem = dados.imagem();}
-
     }
 
     public void atualizarImagem(String caminhoNovaImagem) {

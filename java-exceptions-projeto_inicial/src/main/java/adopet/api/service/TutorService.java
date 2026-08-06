@@ -1,15 +1,13 @@
 package adopet.api.service;
 
-import adopet.api.dto.TutorAtualizaoDTO;
+import adopet.api.dto.TutorAtualizacaoDTO;
 import adopet.api.dto.TutorRequestDTO;
 import adopet.api.dto.TutorResponseDTO;
 import adopet.api.exception.AdocaoException;
-import adopet.api.model.Pet;
 import adopet.api.model.Tutor;
 import adopet.api.repository.TutorRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,7 +40,7 @@ public class TutorService {
     }
 
     @Transactional
-    public TutorResponseDTO atualizar(TutorAtualizaoDTO dados, Long id){
+    public TutorResponseDTO atualizar(TutorAtualizacaoDTO dados, Long id){
 
         Tutor tutor = repository.findById(id)
                         .orElseThrow(() -> new EntityNotFoundException("Tutor não encontrado no sistema."));
