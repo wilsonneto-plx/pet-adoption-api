@@ -172,7 +172,8 @@ public class AdocaoControllerTest {
 
         String jsonRequest = """
                 {
-                    "justificativa": "Infelizmente o ambiente não possui telas de proteção nas janelas para a segurança do gato."
+                    "justificativa": "Infelizmente o ambiente não possui telas de proteção nas janelas para a segurança
+                     do gato."
                 }
                 """;
 

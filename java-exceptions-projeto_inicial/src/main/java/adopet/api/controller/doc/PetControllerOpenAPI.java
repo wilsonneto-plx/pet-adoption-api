@@ -17,15 +17,18 @@ import java.util.List;
 @Tag(name = "Pets", description = "Operações relacionadas ao gerenciamento de Pets")
 public interface PetControllerOpenAPI {
 
-    @Operation(summary = "Listar todos os pets", description = "Retorna uma lista com todos os pets cadastrados no sistema.")
+    @Operation(summary = "Listar todos os pets", description = "Retorna uma lista com todos os pets cadastrados no " +
+            "sistema.")
     @ApiResponse(responseCode = "200", description = "Pets listados com sucesso")
     ResponseEntity<List<PetResponseDTO>> buscarTodos();
 
-    @Operation(summary = "Listar pets disponíveis", description = "Retorna uma lista contendo apenas os pets que ainda não foram adotados.")
+    @Operation(summary = "Listar pets disponíveis", description = "Retorna uma lista contendo apenas os pets que " +
+            "ainda não foram adotados.")
     @ApiResponse(responseCode = "200", description = "Pets disponíveis listados com sucesso")
     ResponseEntity<List<PetResponseDTO>> buscarPetsDisponiveis();
 
-    @Operation(summary = "Cadastrar um novo pet", description = "Cadastra um pet com seus dados e realiza o upload da imagem.")
+    @Operation(summary = "Cadastrar um novo pet", description = "Cadastra um pet com seus dados e realiza o upload da " +
+            "imagem.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Pet cadastrado com sucesso"),
             @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos no formulário")
@@ -45,7 +48,8 @@ public interface PetControllerOpenAPI {
             @ParameterObject PetAtualizacaoDTO dados,
             MultipartFile novaImagem);
 
-    @Operation(summary = "Excluir um pet", description = "Exclui um pet do sistema. Retorna erro se o pet possuir histórico de adoções.")
+    @Operation(summary = "Excluir um pet", description = "Exclui um pet do sistema. Retorna erro se o pet possuir " +
+            "histórico de adoções.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Pet excluído com sucesso"),
             @ApiResponse(responseCode = "400", description = "Não é possível excluir pet com adoções vinculadas"),
