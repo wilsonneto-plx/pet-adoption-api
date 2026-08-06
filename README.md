@@ -148,7 +148,7 @@ Antes de começar, você precisará ter instalado em sua máquina as seguintes f
 
 ## ⚙️ Configuração e Execução
 
-O projeto está configurado com `createDatabaseIfNotExist=true`, o que significa que **o banco de dados será criado automaticamente** pelo Spring Boot ao iniciar a aplicação — não é preciso criar nada manualmente no MySQL!
+O projeto está configurado com `createDatabaseIfNotExist=true`, o que significa que **o banco de dados será criado automaticamente durante a inicialização da aplicação através da configuração do Spring Data JPA/Hibernate**, não sendo necessário realizar a criação manualmente no MySQL.
 
 Para garantir a segurança das credenciais, o sistema utiliza **variáveis de ambiente**. Você precisa defini-las antes de rodar o projeto.
 
