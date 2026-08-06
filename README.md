@@ -67,6 +67,7 @@ O projeto foi desenvolvido seguindo boas práticas de desenvolvimento com o ecos
 - 🏠 Cadastro e gerenciamento de Adoções.
 - ✅ Aprovação de adoções.
 - ❌ Reprovação de adoções.
+- 📸 Suporte a requisições `multipart/form-data` para salvar fotos dos pets diretamente via API.
 
 ### Características Técnicas
 
@@ -79,6 +80,7 @@ O projeto foi desenvolvido seguindo boas práticas de desenvolvimento com o ecos
 * 🛡️ Tratamento global de exceções.
 * 🧪 Testes unitários com JUnit 5 e Mockito.
 * 🌐 Testes de Controller utilizando MockMvc.
+* 📃 Uso de interfaces limpas (`OpenAPI`) para documentar o Swagger sem poluir as regras de negócio dos Controllers.
 
 ---
 
@@ -199,9 +201,9 @@ $env:DB_HOST="localhost:3306"; $env:DB_NAME="adopet_db"; $env:DB_USER="seu_usuar
 
 ## 📄 Documentação da API (Swagger)
 
-O projeto conta com a documentação automatizada e interativa fornecida pelo **Swagger UI**. 
+O projeto conta com a documentação automatizada e interativa fornecida pelo Swagger UI, configurada com separação de responsabilidades (Interface-Driven Controllers). 
 
-Após iniciar a aplicação, você pode visualizar todos os endpoints, os schemas de requisição/resposta (DTOs) e testar a API diretamente pelo navegador acessando:
+Após iniciar a aplicação, você pode visualizar todos os endpoints, os schemas de requisição/resposta (DTOs), e testar a API (inclusive o upload de imagens) diretamente pelo navegador acessando:
 
 🔗 **[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)**
 
